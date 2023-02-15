@@ -65,8 +65,10 @@ int main()
  	printf("file_open %s --> durata in ore %d\n",NameF,time_acq_h_MAX); 
  	file=fopen(NameF, "a");
  	fprintf(file, "sleep time (ms):%d\n", sleep_ms);
+	fclose (file);
  	file=fopen(NameF_bytes, "a");
  	fprintf(file, "sleep time (ms):%d\n", sleep_ms);
+	fclose (file);
  	//writing the file name to the current run name file to be read and used by external programs 
  	//---------------------------------------------------------------
  	currN = fopen("currN.txt", "w"); 
